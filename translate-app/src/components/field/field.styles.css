@@ -1,0 +1,22 @@
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.field__label {
+    display: flex;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.field__input {
+    width: 50%;
+    height: 40px;
+    padding: 8px 16px;
+}

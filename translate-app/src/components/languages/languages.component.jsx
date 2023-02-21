@@ -1,3 +1,5 @@
+import './languages.styles.css';
+
 import React from "react";
 
 function LanguagesComponent({ language, onLanguageChange }) {
