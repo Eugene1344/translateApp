@@ -1,5 +1,6 @@
 
 import FieldComponent from './components/field/field.component';
+import LanguagesComponent from './components/languages/languages.component';
 import './App.css'
 import { useState } from 'react'
 
@@ -9,7 +10,8 @@ function App() {
 
   return (
     <div className="App">
-      <FieldComponent />
+      <FieldComponent value={text} onChange={setText} />
+      <LanguagesComponent language={language} onLanguageChange={setLanguage}/>
     </div>
   )
 }
