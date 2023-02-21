@@ -1,0 +1,29 @@
+.opts {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 24px;
+}
+
+.opt {
+    padding: 8px;
+    margin: 8px;
+    display: inline-flex;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.opt.selected {
+    background-color: white;
+    color: #000;
+}
+
+.label {
+    margin-bottom: 24px;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+}

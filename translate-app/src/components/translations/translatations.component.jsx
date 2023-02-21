@@ -7,7 +7,7 @@ function TranslateComponent({ language, text }) {
   return (
     <div className="translate">
       <label className="label">Output</label>
-      <h1 className="title">{translated.replace("&#39;", "'")}</h1>
+      <h2 className="translate__title">{translated.replace("&#39;", "'")}</h2>
     </div>
   );
 }
