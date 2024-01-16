@@ -13,8 +13,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Delete branch after merge
+      - name: Delete Branch After Merge
+        if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
         run: |
-          if [ "${{ github.event_name }}" = "pull_request" ] && [ "${{ github.event.action }}" = "closed" ] && [ "${{ github.event.pull_request.merged }}" = "true" ]; then
-            git push origin --delete "${{ github.event.pull_request.head.ref }}"
-          fi
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git push origin --delete ${{ github.event.pull_request.head.ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
