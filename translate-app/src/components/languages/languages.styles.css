@@ -17,7 +17,7 @@
 }
 
 .opt.selected {
-    background-color: white;
+    background-color: red;
     color: #000;
 }
 
